@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Unboxing
 {
@@ -10,7 +7,15 @@ namespace Unboxing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("w");
+            int valType = 10;
+            object objType = valType; // Boxing
+
+            // Fixed: unbox from 'objType' instead of 'valType'
+            int unboxedValType = (int)objType;
+
+            Console.WriteLine("Unboxed Value: " + unboxedValType);
+            Console.ReadLine();    
+        
         }
     }
 }
